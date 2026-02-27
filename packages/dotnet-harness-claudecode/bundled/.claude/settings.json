@@ -1,4 +1,30 @@
 {
+  "permissions": {
+    "deny": [
+      "Read(*.dll)",
+      "Read(*.exe)",
+      "Read(*.key)",
+      "Read(*.pdb)",
+      "Read(*.pem)",
+      "Read(*.pfx)",
+      "Read(*.snk)",
+      "Read(*.tmp)",
+      "Read(*.user)",
+      "Read(.env)",
+      "Read(.vs/)",
+      "Read(.vscode/)",
+      "Read(TestResults/)",
+      "Read(appsettings.*.json)",
+      "Read(bin/)",
+      "Read(coverage/)",
+      "Read(launchSettings.json)",
+      "Read(node_modules/)",
+      "Read(obj/)",
+      "Read(packages/)",
+      "Read(temp/)",
+      "Read(tmp/)"
+    ]
+  },
   "hooks": {
     "SessionStart": [
       {
@@ -33,32 +59,6 @@
           }
         ]
       }
-    ]
-  },
-  "permissions": {
-    "deny": [
-      "Read(*.dll)",
-      "Read(*.exe)",
-      "Read(*.key)",
-      "Read(*.pdb)",
-      "Read(*.pem)",
-      "Read(*.pfx)",
-      "Read(*.snk)",
-      "Read(*.tmp)",
-      "Read(*.user)",
-      "Read(.env)",
-      "Read(.vs/)",
-      "Read(.vscode/)",
-      "Read(TestResults/)",
-      "Read(appsettings.*.json)",
-      "Read(bin/)",
-      "Read(coverage/)",
-      "Read(launchSettings.json)",
-      "Read(node_modules/)",
-      "Read(obj/)",
-      "Read(packages/)",
-      "Read(temp/)",
-      "Read(tmp/)"
     ]
   }
 }
