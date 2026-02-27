@@ -92,13 +92,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Validate bot actor for generated changes
+      - name: Validate bot-authored commits for generated changes
         env:
           EVENT_NAME: ${{ github.event_name }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           BEFORE_SHA: ${{ github.event.before }}
           HEAD_SHA: ${{ github.sha }}
-          ACTOR: ${{ github.actor }}
         run: |
           set -euo pipefail
 
@@ -138,9 +137,16 @@ jobs:
             fi
           done
 
-          if [[ "$generated_changed" == true && "$ACTOR" != "github-actions[bot]" ]]; then
-            echo "Generated paths can only be changed by github-actions[bot]. Current actor: $ACTOR"
-            exit 1
+          if [[ "$generated_changed" == true ]]; then
+            mapfile -t commits < <(git rev-list "$FROM_SHA..$HEAD_SHA")
+            for c in "${commits[@]}"; do
+              author="$(git show -s --format='%an <%ae>' "$c")"
+              if [[ "$author" != "github-actions[bot] <github-actions[bot]@users.noreply.github.com>" ]]; then
+                echo "Generated paths require bot-authored commits only."
+                echo "Found non-bot commit: $c by $author"
+                exit 1
+              fi
+            done
           fi
 
           echo "Bot ownership policy passed."
