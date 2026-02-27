@@ -1,0 +1,30 @@
+[mcp_servers.serena]
+description = "Semantic code analysis and editing toolkit"
+type = "stdio"
+command = "uvx"
+args = [ "--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--context", "ide", "--project", "." ]
+
+[mcp_servers.serena.env]
+[mcp_servers.context7]
+description = "Library documentation search server"
+type = "stdio"
+command = "npx"
+args = [ "-y", "@upstash/context7-mcp@2.1.2" ]
+
+[mcp_servers.context7.env]
+[mcp_servers.microsoftdocs-mcp]
+description = "Microsoft Learn documentation MCP"
+type = "http"
+url = "https://learn.microsoft.com/api/mcp"
+
+[mcp_servers.mcp-windbg]
+description = "WinDbg crash and dump analysis MCP"
+type = "stdio"
+command = "uvx"
+args = [ "--from", "git+https://github.com/svnscha/mcp-windbg@v0.12.2", "mcp-windbg" ]
+
+[mcp_servers.mcp-windbg.env]
+[mcp_servers.deepwiki]
+description = "DeepWiki MCP for documentation access"
+type = "http"
+url = "https://mcp.deepwiki.com/mcp"
