@@ -228,9 +228,27 @@ Before any .NET guidance, determine the project's target framework:
 
 ### 20. AI & LLM Integration `implemented`
 
-- [skill:dotnet-semantic-kernel] -- Semantic Kernel: plugins, prompt templates, memory, agents
+- [skill:dotnet-microsoft-agent-framework] -- Microsoft Agent Framework: agents, workflows, tools, MCP servers,
+  multi-agent orchestration
+- [skill:microsoft-learn-mcp] -- Microsoft Learn documentation via MCP
+- [skill:github-mcp] -- GitHub operations: repos, PRs, issues, Actions via MCP
+- [skill:docker-mcp] -- Docker container management, images, Compose via MCP
+- [skill:mcp-health] -- Validate MCP server connectivity and health status
+- [skill:mcp-discovery] -- Discover and catalog available MCP servers from registries
 
-### 21. Debugging `implemented`
+### 21. Intelligence & Recommendations `implemented`
+
+- [skill:dotnet-harness-recommender] -- AI-powered skill recommendations
+- [skill:dotnet-harness-search] -- Semantic skill search with filtering
+
+- [skill:dotnet-harness-recommender] -- AI-powered skill recommendations based on project analysis
+- [skill:dotnet-harness-search] -- Semantic skill search with filtering
+
+### 22. Skill Management `implemented`
+
+- [skill:dotnet-harness-manifest] -- Skill manifest management: dependencies, conflicts, version resolution
+
+### 23. Testing & Debugging `implemented`
 
 - [skill:dotnet-windbg-debugging] -- WinDbg MCP: crash dumps, hangs, high CPU, memory triage (any Windows app)
 
@@ -395,7 +413,7 @@ Use this decision tree to load the right skills for the current task.
 
 ### AI & LLM Integration
 
-- Semantic Kernel, LLM orchestration, plugins -> [skill:dotnet-semantic-kernel]
+- Microsoft Agent Framework, AI agents, workflows, tools -> [skill:dotnet-microsoft-agent-framework]
 
 ### Debugging
 
@@ -410,4 +428,6 @@ For complex analysis that benefits from domain expertise, delegate to specialist
 - Test architecture, test type selection, test data management, microservice testing ->
   [skill:dotnet-testing-specialist]
 - Cloud deployment, .NET Aspire, AKS, CI/CD pipelines, distributed tracing -> [skill:dotnet-cloud-specialist]
+- Microsoft Agent Framework: agent design, workflow orchestration, multi-agent patterns, tool integration ->
+  [skill:dotnet-microsoft-agent-framework-specialist]
 - General code review (correctness, performance, security, architecture) -> [skill:dotnet-code-review-agent]
