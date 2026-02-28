@@ -6,10 +6,19 @@ description: >-
   Triggers on: review this, code review, PR review, what's wrong with this code.
 model: inherit
 allowed-tools:
+  - serena_get_symbols_overview
+  - serena_find_symbol
+  - serena_find_referencing_symbols
+  - serena_replace_symbol_body
+  - serena_replace_content
+  - serena_insert_after_symbol
+  - serena_insert_before_symbol
   - Read
   - Grep
   - Glob
   - Bash
+  - Write
+  - Edit
 ---
 # dotnet-code-review-agent
 
