@@ -10,6 +10,8 @@ allowed-tools:
   - Grep
   - Glob
   - Bash
+  - Write
+  - Edit
 ---
 # dotnet-code-review-agent
 
