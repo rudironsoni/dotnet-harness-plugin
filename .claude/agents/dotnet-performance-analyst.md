@@ -10,6 +10,9 @@ allowed-tools:
   - Read
   - Grep
   - Glob
+  - Bash
+  - Write
+  - Edit
 ---
 # dotnet-performance-analyst
 
