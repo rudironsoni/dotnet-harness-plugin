@@ -1,9 +1,10 @@
 ---
 mode: subagent
+hidden: false
 tools:
   bash: true
-  edit: false
-  write: false
+  edit: true
+  write: true
 description: >-
   Analyzes .NET project context, requirements, and constraints to recommend
   architecture approaches, framework choices, and design patterns. Triggers on:

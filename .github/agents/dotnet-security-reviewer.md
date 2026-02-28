@@ -8,6 +8,8 @@ tools:
   - agent/runSubagent
   - read
   - search
+  - execute
+  - edit
 ---
 # dotnet-security-reviewer
 

@@ -1,9 +1,9 @@
 ---
 mode: subagent
 tools:
-  bash: false
-  edit: false
-  write: false
+  bash: true
+  edit: true
+  write: true
 description: >-
   Reviews .NET code for security vulnerabilities, OWASP compliance, secrets
   exposure, and cryptographic misuse. Read-only analysis agent -- does not
