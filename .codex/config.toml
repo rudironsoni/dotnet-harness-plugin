@@ -28,3 +28,20 @@ args = [ "--from", "git+https://github.com/svnscha/mcp-windbg@v0.12.2", "mcp-win
 description = "DeepWiki MCP for documentation access"
 type = "http"
 url = "https://mcp.deepwiki.com/mcp"
+
+[mcp_servers.github-mcp]
+description = "GitHub MCP for repository operations, PRs, and issues"
+type = "stdio"
+command = "npx"
+args = [ "-y", "@modelcontextprotocol/server-github" ]
+
+[mcp_servers.github-mcp.env]
+GITHUB_PERSONAL_ACCESS_TOKEN = "${GITHUB_TOKEN}"
+
+[mcp_servers.docker-mcp]
+description = "Docker MCP for container management and image builds"
+type = "stdio"
+command = "docker"
+args = [ "run", "-i", "--rm", "-v", "/var/run/docker.sock:/var/run/docker.sock", "mcp/docker" ]
+
+[mcp_servers.docker-mcp.env]
