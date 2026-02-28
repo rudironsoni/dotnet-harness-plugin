@@ -9,6 +9,8 @@ allowed-tools:
   - Read
   - Grep
   - Glob
+  - Write
+  - Edit
 ---
 # dotnet-security-reviewer
 

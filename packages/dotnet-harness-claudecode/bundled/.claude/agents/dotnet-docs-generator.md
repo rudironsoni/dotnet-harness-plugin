@@ -12,6 +12,8 @@ allowed-tools:
   - Grep
   - Glob
   - Bash
+  - Write
+  - Edit
   - Edit
   - Write
 ---
